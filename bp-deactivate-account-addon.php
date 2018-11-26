@@ -27,7 +27,7 @@ class BP_Deactivate_Account_Addon {
 	private static $instance = null;
 
 	/**
-	 * BP_Featured_Member_Addon constructor.
+	 * BP_Deactivate_Account_Addon constructor.
 	 */
 	private function __construct() {
 		$this->setup();
@@ -64,7 +64,7 @@ class BP_Deactivate_Account_Addon {
 	}
 
 	/**
-	 * Setup hourly cronjob to remove featured members
+	 * Setup hourly cronjob to activate accounts
 	 */
 	public function on_activation() {
 
@@ -109,7 +109,7 @@ class BP_Deactivate_Account_Addon {
 	}
 
 	/**
-	 * Save datetime when a user marked as featured
+	 * Save datetime when a user account is deactivated
 	 *
 	 * @param int $user_id User id.
 	 */
@@ -118,7 +118,7 @@ class BP_Deactivate_Account_Addon {
 	}
 
 	/**
-	 * Save datetime when a user marked as featured
+	 * remove datetime when a user account is activated
 	 *
 	 * @param int $user_id User id.
 	 */
